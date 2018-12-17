@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <algorithm>
+#include <math.h>
+using namespace std;
+#pragma warning(disable:4996)
+int n, sx, sy;
+int arr[110][110];
+int main()
+{
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+	scanf("%d", &n);
+	scanf("%d %d", &sx, &sy);
+	arr[sx][sy] = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		for (int j = 1; j <= n; j++)
+		{
+			arr[i][j] = abs(sx - i) + abs(sy - j)+1;
+		}
+	}
+	for (int i = 1; i <= n; i++)
+	{
+		for (int j = 1; j <= n; j++)
+		{
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+}

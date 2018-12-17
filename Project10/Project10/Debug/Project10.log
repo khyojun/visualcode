@@ -1,0 +1,6 @@
+﻿  소스.cpp
+c:\users\nando\source\repos\project10\project10\소스.cpp(15): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\nando\source\repos\project10\project10\소스.cpp(17): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\nando\source\repos\project10\project10\소스.cpp(38): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\nando\source\repos\project10\project10\소스.cpp(46): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
+  Project10.vcxproj -> C:\Users\nando\source\repos\Project10\Debug\Project10.exe

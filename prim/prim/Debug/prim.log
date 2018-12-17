@@ -1,0 +1,4 @@
+﻿  소스.cpp
+c:\users\nando\source\repos\prim\prim\소스.cpp(28): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\nando\source\repos\prim\prim\소스.cpp(45): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  prim.vcxproj -> C:\Users\nando\source\repos\prim\Debug\prim.exe

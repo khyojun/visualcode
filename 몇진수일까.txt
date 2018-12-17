@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+char n[1010],m[1010];
+int ch,w1,w2,tmp;
+int x1,y2,flag;
+int n1,m1;
+int sum;
+int arr[1010];
+int cg(char x[], int y)
+{
+	int save;
+	int res=0;
+	for(int i=strlen(x)-1; i>=0; i--)
+	{
+		if(x[i]>='A' && x[i]<='Z')
+		{
+			int save=0;
+			save=x[i]-'A'+10;
+			tmp=pow(y, strlen(x)-1-i);
+			res+=tmp*save;
+						
+		}
+		else if(x[i]>='1' && x[i]<='9')
+		{
+			int save=0;
+			save=x[i]-'1'+1;
+			tmp=pow(y, strlen(x)-1-i);
+			res+=tmp*save;
+		}	
+	}
+	
+	return res;
+}
+
+int chk(char x[])
+{
+	int max=-999;
+	for(int i=0; i<strlen(x); i++)
+	{
+		if(x[i]>='A' && x[i]<='Z')
+		{
+			ch=x[i]-'A'+10;
+			if(max<=ch)
+			{
+				max=ch;	
+			}		
+		}
+		else if(x[i]>='1' && x[i]<='9')
+		{
+			ch=x[i]-'1'+1;
+			if(max<=ch)
+			{
+				max=ch;
+			}
+		}
+	}
+	return max;
+}
+
+
+
+int main() {
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+	scanf("%s",n);
+	scanf("%s", m);
+	w1=chk(n)+1;
+	w2=chk(m)+1;
+	for(int i=w1; i<=36; i++)
+	{
+		x1=cg(n, i);
+		for(int j=w2; j<=36; j++)
+		{
+			y2=cg(m, j);
+			if(x1==y2)
+			{
+				printf("%d %d",i, j);
+				return 0;	
+			}	
+		}
+	}
+	printf("0 0");
+}
